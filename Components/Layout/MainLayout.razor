@@ -1,15 +1,20 @@
-﻿@inherits LayoutComponentBase
-
-<div class="page">
-  <NavMenu />
-
-  <main class="main-content">
-    @Body
-  </main>
-</div>
-
-<div id="blazor-error-ui">
-  An unhandled error has occurred.
-  <a href="" class="reload">Reload</a>
-  <a class="dismiss">🗙</a>
-</div>
+@inherits LayoutComponentBase
+<header class="site-header">
+    <div class="container nav-wrap">
+        <a class="brand" href="/" aria-label="H2 Payroll home"><img src="https://static.wixstatic.com/media/fc6c49_7ecd5c95b3df4900a60b550b02f93e26~mv2.png/v1/fill/w_386,h_92,al_c,q_85/H2%20Payroll%20Logo.png" alt="H2 Payroll" /></a>
+        <nav class="desktop-nav">
+            <a href="/our-solutions">Our Solutions</a><a href="/cloud-payroll">Cloud Payroll</a><a href="/payroll-outsourcing">Payroll Outsourcing</a><a href="/clients">Clients</a><a href="/partners">Partners</a><a href="/about-us">About Us</a>
+        </nav>
+        <a class="nav-cta" href="/contact-us">Contact Us <span>↗</span></a>
+        <details class="mobile-menu"><summary aria-label="Open navigation">☰</summary><div class="mobile-links"><a href="/our-solutions">Our Solutions</a><a href="/cloud-payroll">Cloud Payroll</a><a href="/payroll-outsourcing">Payroll Outsourcing</a><a href="/clients">Clients</a><a href="/partners">Partners</a><a href="/about-us">About Us</a><a href="/contact-us">Contact Us</a></div></details>
+    </div>
+</header>
+<main>@Body</main>
+<footer class="footer">
+    <div class="container footer-grid">
+        <div><img class="footer-logo" src="https://static.wixstatic.com/media/fc6c49_7ecd5c95b3df4900a60b550b02f93e26~mv2.png/v1/fill/w_386,h_92,al_c,q_85/H2%20Payroll%20Logo.png" alt="H2 Payroll" /><p>A cloud payroll software built by Filipinos for Filipino companies.</p></div>
+        <div><h4>Explore</h4><a href="/our-solutions">Our Solutions</a><a href="/cloud-payroll">Cloud Payroll</a><a href="/payroll-outsourcing">Payroll Outsourcing</a><a href="/about-us">About Us</a></div>
+        <div><h4>Contact Us</h4><p>3F Ardan Building, #2 Meralco Avenue,<br/>Ortigas Center, Pasig City</p><a href="mailto:HR@h2software.net">HR@h2software.net</a><a href="mailto:sales@h2software.net">sales@h2software.net</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© @DateTime.Now.Year H2 Software Consulting Services, Inc.</span><span>Payroll made simpler.</span></div>
+</footer>
